@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dropslab Core Guide</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/intro.js/2.7.0/introjs.min.css">
+</head>
+<body onload="startTour()">
+    <div class="container mt-5">
+        <button class="btn btn-primary" onclick="startTour()">Dropslab Core</button>
+    </div>
+
+    <div class="container mt-3" data-step="1" data-intro="Welcome to Dropslab! This is the step-by-step guide to use the system.">
+        <h1>Dropslab Core System</h1>
+        <p>This section introduces you to the core functionalities of Dropslab.</p>
+    </div>
+
+    <div class="container mt-3" data-step="2" data-intro="This is where you can access all the main features.">
+        <h2>Main Features</h2>
+        <p>Here you will find the main features of our system.</p>
+    </div>
+
+    <div class="container mt-3" data-step="3" data-intro="This is the footer section. Thank you for using Dropslab!">
+        <h3>Footer</h3>
+        <p>&copy; 2024 Dropslab. All rights reserved.</p>
+    </div>
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/intro.js/2.7.0/intro.min.js"></script>
+    <script type="text/javascript">
+        function startTour() {
+            introJs().start();
+        }
+    </script>
+</body>
+</html>
