@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dropslab Core Guide Integration</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.3.1/reveal.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.3.1/theme/white.min.css" id="theme">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/intro.js/2.7.0/introjs.min.css">
+    <style>
+        .img-fluid {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="reveal">
+        <div class="slides">
+            <section>
+                <h1>Dropslab Core Guide Integration</h1>
+                <p>By [Sonam Dorje Lama]</p>
+            </section>
+            <section>
+                <h2>Introduction</h2>
+                <p>This presentation explains how to integrate Intro.js into a website to create a step-by-step guide for users.</p>
+            </section>
+            <section>
+                <h2>Step 1: Include Bootstrap and Intro.js</h2>
+                <pre><code>&lt;link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous"&gt;
+&lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intro.js/2.7.0/introjs.min.css"&gt;
+&lt;script src="https://cdnjs.cloudflare.com/ajax/libs/intro.js/2.7.0/intro.min.js"&gt;&lt;/script&gt;</code></pre>
+            </section>
+            <section>
+                <h2>Step 2: Create the HTML Structure</h2>
+                <pre><code>&lt;div class="container mt-5"&gt;
+    &lt;button class="btn btn-primary" onclick="startTour()"&gt;Dropslab Core&lt;/button&gt;
+&lt;/div&gt;
+
+&lt;div class="container mt-3" data-step="1" data-intro="Welcome to Dropslab! &lt;br&gt; This is the step-by-step guide to use the system. &lt;br&gt; &lt;img src='click.png' alt='Click' class='img-fluid'&gt;"&gt;
+    &lt;h1&gt;Dropslab Core System&lt;/h1&gt;
+    &lt;p&gt;This section introduces you to the core functionalities of Dropslab.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class="container mt-3" data-step="2" data-intro="This is where you can access all the main features."&gt;
+    &lt;h2&gt;Main Features&lt;/h2&gt;
+    &lt;p&gt;Here you will find the main features of our system.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class="container mt-3" data-step="3" data-intro="This is the footer section. Thank you for using Dropslab!"&gt;
+    &lt;h3&gt;Footer&lt;/h3&gt;
+    &lt;p&gt;&amp;copy; 2024 Dropslab. All rights reserved.&lt;/p&gt;
+&lt;/div&gt;</code></pre>
+            </section>
+            <section>
+                <h2>Step 3: Add JavaScript to Start the Tour</h2>
+                <pre><code>&lt;script&gt;
+function startTour() {
+    introJs().start();
+}
+&lt;/script&gt;</code></pre>
+            </section>
+            <section>
+                <h2>Example: Complete Code</h2>
+                <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;Dropslab Core Guide&lt;/title&gt;
+    &lt;link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous"&gt;
+    &lt;link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/intro.js/2.7.0/introjs.min.css"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div class="container mt-5"&gt;
+        &lt;button class="btn btn-primary" onclick="startTour()"&gt;Dropslab Core&lt;/button&gt;
+    &lt;/div&gt;
+
+    &lt;div class="container mt-3" data-step="1" data-intro="Welcome to Dropslab! &lt;br&gt; This is the step-by-step guide to use the system. &lt;br&gt; &lt;img src='click.png' alt='Click' class='img-fluid'&gt;"&gt;
+        &lt;h1&gt;Dropslab Core System&lt;/h1&gt;
+        &lt;p&gt;This section introduces you to the core functionalities of Dropslab.&lt;/p&gt;
+    &lt;/div&gt;
+
+    &lt;div class="container mt-3" data-step="2" data-intro="This is where you can access all the main features."&gt;
+        &lt;h2&gt;Main Features&lt;/h2&gt;
+        &lt;p&gt;Here you will find the main features of our system.&lt;/p&gt;
+    &lt;/div&gt;
+
+    &lt;div class="container mt-3" data-step="3" data-intro="This is the footer section. Thank you for using Dropslab!"&gt;
+        &lt;h3&gt;Footer&lt;/h3&gt;
+        &lt;p&gt;&amp;copy; 2024 Dropslab. All rights reserved.&lt;/p&gt;
+    &lt;/div&gt;
+
+    &lt;script src="https://cdnjs.cloudflare.com/ajax/libs/intro.js/2.7.0/intro.min.js"&gt;&lt;/script&gt;
+    &lt;script&gt;
+        function startTour() {
+            introJs().start();
+        }
+    &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+            </section>
+            <section>
+                <h2>Conclusion</h2>
+                <p>By following these steps, you can easily integrate Intro.js into your website to create an interactive, step-by-step guide for users.</p>
+                <p>Thank you for watching!</p>
+            </section>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.3.1/reveal.min.js"></script>
+    <script>
+        Reveal.initialize();
+    </script>
+</body>
+</html>
